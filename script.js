@@ -4,37 +4,18 @@
 
 const SKILLS = [
   {
-    category: "Linguagens",
+    category: "Programação",
     items: [
-      { name: "JavaScript", status: "conhecimento" },
-      { name: "TypeScript", status: "estudando" },
-      { name: "Python", status: "conhecimento" },
-      { name: "Java", status: "estudando" },
-      { name: "SQL", status: "conhecimento" },
+      { name: "Python", status: "estudando" },
+      { name: "SQL", status: "estudando" },
+      { name: "JavaScript", status: "estudando" },
     ],
   },
   {
     category: "Front-end",
     items: [
-      { name: "HTML5 & CSS3", status: "conhecimento" },
-      { name: "React", status: "estudando" },
-      { name: "Tailwind CSS", status: "estudando" },
-    ],
-  },
-  {
-    category: "Back-end",
-    items: [
-      { name: "Node.js", status: "estudando" },
-      { name: "Express", status: "estudando" },
-      { name: "APIs REST", status: "estudando" },
-    ],
-  },
-  {
-    category: "Banco de dados",
-    items: [
-      { name: "MySQL", status: "conhecimento" },
-      { name: "PostgreSQL", status: "estudando" },
-      { name: "MongoDB", status: "estudando" },
+      { name: "HTML5", status: "conhecimento" },
+      { name: "CSS3", status: "conhecimento" },
     ],
   },
   {
@@ -42,16 +23,16 @@ const SKILLS = [
     items: [
       { name: "Git & GitHub", status: "conhecimento" },
       { name: "VS Code", status: "conhecimento" },
-      { name: "Linux (básico)", status: "conhecimento" },
-      { name: "Figma", status: "estudando" },
+      { name: "Excel / Pacote Office", status: "conhecimento" },
+      { name: "SAP", status: "conhecimento" },
     ],
   },
   {
-    category: "IA & automação",
+    category: "Em desenvolvimento",
     items: [
-      { name: "Prompt engineering", status: "conhecimento" },
+      { name: "Inteligência Artificial", status: "explorando" },
       { name: "Automação com Python", status: "explorando" },
-      { name: "APIs de IA", status: "explorando" },
+      { name: "Inglês técnico", status: "estudando" },
     ],
   },
 ];
@@ -92,36 +73,35 @@ const PROJECTS = [
 const TIMELINE = [
   {
     eyebrow: "concluído",
-    title: "Curso Técnico em Informática — IF",
-    desc: "Primeiro contato formal com lógica de programação, sistemas e fundamentos de tecnologia.",
+    title: "Técnico em Informática — IFMT",
+    desc: "Formação técnica com contato com informática, lógica de programação, sistemas e fundamentos de tecnologia.",
     current: false,
   },
   {
-    eyebrow: "pausa",
-    title: "Período afastado da área",
-    desc: "Tempo fora da tecnologia — a trajetória nem sempre é uma linha reta.",
-    current: false,
+    eyebrow: "experiência atual",
+    title: "Jovem Aprendiz — Bunge",
+    desc: "Atuação no almoxarifado ligado à manutenção, trabalhando com recebimento e entrega de materiais, organização de estoque, planilhas, sistemas, compras e conferência de notas fiscais.",
+    current: true,
   },
   {
     eyebrow: "em andamento",
-    title: "Graduação em Análise e Desenvolvimento de Sistemas",
-    desc: "Retomada dos estudos, reconstruindo a base técnica com mais consistência e direção.",
+    title: "Análise e Desenvolvimento de Sistemas",
+    desc: "Graduação focada no desenvolvimento das minhas competências em programação, banco de dados, sistemas e desenvolvimento de software.",
     current: true,
   },
   {
-    eyebrow: "contínuo",
-    title: "Estudos e projetos pessoais",
-    desc: "Prática diária, projetos próprios e aprofundamento em desenvolvimento, dados e IA.",
+    eyebrow: "em desenvolvimento",
+    title: "Projetos pessoais em tecnologia",
+    desc: "Desenvolvimento de projetos utilizando HTML, CSS, JavaScript, Git, GitHub, Python e outras tecnologias que estou estudando.",
     current: true,
   },
   {
-    eyebrow: "próximo passo",
-    title: "Em busca da primeira oportunidade",
-    desc: "Buscando um estágio ou vaga júnior para aplicar o conhecimento em um contexto real de equipe.",
+    eyebrow: "objetivo",
+    title: "Estágio em Tecnologia",
+    desc: "Busco uma oportunidade para aplicar meus conhecimentos, desenvolver projetos reais e avançar profissionalmente nas áreas de desenvolvimento, dados e Inteligência Artificial.",
     current: true,
   },
 ];
-
 const ICONS = {
   grid: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>',
   chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V10M12 20V4M20 20v-7" stroke-linecap="round"/></svg>',

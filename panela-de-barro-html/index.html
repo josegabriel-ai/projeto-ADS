@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panela de Barro | Comida Caseira e Saborosa</title>
+  <meta name="description" content="Comida caseira, saborosa e preparada diariamente. Confira nosso cardápio e faça seu pedido pelo WhatsApp." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Panela de Barro | Comida Caseira e Saborosa" />
+  <meta property="og:description" content="Comida caseira, saborosa e preparada diariamente. Confira nosso cardápio e faça seu pedido pelo WhatsApp." />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a href="#inicio" class="brand">
+        <span class="brand-mark"><i class="icon" data-icon="chef-hat"></i></span>
+        <span class="brand-text">
+          <span class="brand-name">Panela de Barro</span>
+          <span class="brand-sub">Marmitaria &amp; Comida Caseira</span>
+        </span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navegação principal">
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#cardapio" class="nav-link">Cardápio</a>
+        <a href="#sobre" class="nav-link">Sobre nós</a>
+        <a href="#galeria" class="nav-link">Galeria</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#" class="btn btn-primary btn-sm js-wa-default">
+          <i class="icon" data-icon="message-circle"></i> Fazer pedido
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <i class="icon" data-icon="menu" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Navegação mobile">
+      <a href="#inicio" class="nav-mobile-link">Início</a>
+      <a href="#cardapio" class="nav-mobile-link">Cardápio</a>
+      <a href="#sobre" class="nav-mobile-link">Sobre nós</a>
+      <a href="#galeria" class="nav-mobile-link">Galeria</a>
+      <a href="#contato" class="nav-mobile-link">Contato</a>
+      <a href="#" class="btn btn-primary js-wa-default" style="margin-top:0.5rem">
+        <i class="icon" data-icon="message-circle"></i> Fazer pedido
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Feito todos os dias, com carinho</p>
+        <h1 class="hero-title">Comida caseira <span class="hero-title-accent">feita com carinho</span></h1>
+        <p class="hero-sub">Sabores deliciosos, ingredientes frescos e aquele gostinho de comida feita em casa — direto para a sua mesa.</p>
+        <div class="hero-buttons">
+          <a href="#cardapio" class="btn btn-primary">Ver cardápio</a>
+          <a href="#" class="btn btn-outline js-wa-default"><i class="icon" data-icon="message-circle"></i> Pedir pelo WhatsApp</a>
+        </div>
+        <div class="hero-badges">
+          <div class="hero-badge"><i class="icon" data-icon="star"></i><span>4.9/5 avaliação dos clientes</span></div>
+          <div class="hero-badge"><i class="icon" data-icon="salad"></i><span>Comida fresca</span></div>
+          <div class="hero-badge"><i class="icon" data-icon="cooking-pot"></i><span>Feita diariamente</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-plate">
+          <div class="placeholder-art tone-cream">
+            <i class="icon" data-icon="soup"></i>
+            <span class="placeholder-tag">foto</span>
+          </div>
+          <svg viewBox="0 0 60 40" class="hero-steam" fill="none" aria-hidden="true">
+            <path class="steam steam-1" d="M10 38C10 30 4 28 4 20C4 12 10 10 10 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+            <path class="steam steam-2" d="M30 38C30 30 24 28 24 20C24 12 30 10 30 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+            <path class="steam steam-3" d="M50 38C50 30 44 28 44 20C44 12 50 10 50 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="hero-seal"><span>feito<br />em casa</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTAQUES -->
+  <section class="section">
+    <div class="wrap">
+      <div class="highlights-grid" id="highlights-grid"></div>
+    </div>
+  </section>
+
+  <!-- CARDÁPIO -->
+  <section id="cardapio" class="section section-cream">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Nosso cardápio</p>
+        <h2 class="section-title">Feito na hora, do jeito que você gosta</h2>
+      </div>
+      <div class="filter-row" id="filter-row" role="tablist" aria-label="Categorias do cardápio"></div>
+      <div class="menu-grid" id="menu-grid"></div>
+    </div>
+  </section>
+
+  <!-- COMO PEDIR -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">É simples</p>
+        <h2 class="section-title">Como pedir</h2>
+      </div>
+      <div class="steps-grid" id="steps-grid"></div>
+      <div class="steps-cta">
+        <a href="#" class="btn btn-primary btn-lg js-wa-default"><i class="icon" data-icon="send"></i> Fazer meu pedido</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section section-cream">
+    <div class="wrap about-grid">
+      <div class="about-visual">
+        <div class="placeholder-art tone-herb about-art">
+          <i class="icon" data-icon="cooking-pot"></i>
+          <span class="placeholder-tag">foto</span>
+        </div>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">Sobre a Panela de Barro</p>
+        <h2 class="section-title">Uma história de sabor e carinho</h2>
+        <p class="about-text">Há anos levando comida caseira e saborosa para a mesa dos nossos clientes. Nosso objetivo é oferecer refeições preparadas com carinho, ingredientes de qualidade e aquele sabor que lembra comida de casa.</p>
+        <div class="stats-grid">
+          <div class="stat-card"><span class="stat-value">+5.000</span><span class="stat-label">Marmitas vendidas</span></div>
+          <div class="stat-card"><span class="stat-value">+500</span><span class="stat-label">Clientes satisfeitos</span></div>
+          <div class="stat-card"><span class="stat-value">4.9/5</span><span class="stat-label">Avaliação média</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Um gostinho visual</p>
+        <h2 class="section-title">Galeria</h2>
+      </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-inner">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Fechar"><i class="icon" data-icon="x"></i></button>
+        <div class="placeholder-art tone-terracotta lightbox-art" id="lightbox-art">
+          <i class="icon" data-icon="soup"></i>
+          <span class="placeholder-tag">foto</span>
+        </div>
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES -->
+  <section class="section section-cream">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Quem prova, aprova</p>
+        <h2 class="section-title">O que dizem nossos clientes</h2>
+      </div>
+      <div class="testimonials-grid" id="testimonials-grid"></div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="eyebrow">Fale com a gente</p>
+        <h2 class="section-title">Localização e contato</h2>
+        <ul class="contact-list">
+          <li class="contact-item"><span class="contact-icon"><i class="icon" data-icon="map-pin"></i></span><span><strong>Endereço</strong><br />Rua Exemplo, 123 — Setor Centro, Goiânia - GO</span></li>
+          <li class="contact-item"><span class="contact-icon"><i class="icon" data-icon="phone"></i></span><span><strong>Telefone</strong><br />(62) 9 9999-9999</span></li>
+          <li class="contact-item"><span class="contact-icon"><i class="icon" data-icon="clock"></i></span><span><strong>Horário</strong><br />Segunda a sábado — 11h às 14h</span></li>
+          <li class="contact-item"><span class="contact-icon"><i class="icon" data-icon="message-circle"></i></span><span><strong>WhatsApp</strong><br />(62) 9 9999-9999</span></li>
+        </ul>
+        <a href="#" class="btn btn-primary js-wa-default" style="margin-top:1.5rem"><i class="icon" data-icon="message-circle"></i> Chamar no WhatsApp</a>
+      </div>
+      <div class="map-placeholder" role="img" aria-label="Mapa de localização">
+        <i class="icon" data-icon="map-pin"></i>
+        <p>Substitua por um mapa incorporado do Google Maps</p>
+        <span class="map-address">Rua Exemplo, 123 — Setor Centro, Goiânia - GO</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <div class="wrap cta-final-inner">
+      <svg viewBox="0 0 60 40" class="cta-steam" fill="none" aria-hidden="true">
+        <path class="steam steam-1" d="M10 38C10 30 4 28 4 20C4 12 10 10 10 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+        <path class="steam steam-2" d="M30 38C30 30 24 28 24 20C24 12 30 10 30 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+        <path class="steam steam-3" d="M50 38C50 30 44 28 44 20C44 12 50 10 50 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+      </svg>
+      <h2 class="cta-title">Tá esperando o quê?</h2>
+      <p class="cta-sub">Peça sua marmita agora e receba o sabor de comida caseira onde estiver.</p>
+      <a href="#" class="btn btn-light btn-lg js-wa-default"><i class="icon" data-icon="message-circle"></i> Fazer pedido pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:0.75rem">
+          <span class="brand-mark brand-mark-footer"><i class="icon" data-icon="chef-hat"></i></span>
+          <span class="brand-name footer-brand-name">Panela de Barro</span>
+        </div>
+        <p class="footer-desc">Comida caseira feita com carinho, todos os dias.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">Links rápidos</h4>
+        <ul class="footer-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contato</h4>
+        <ul class="footer-links">
+          <li>Rua Exemplo, 123 — Setor Centro, Goiânia - GO</li>
+          <li>(62) 9 9999-9999</li>
+          <li>Segunda a sábado — 11h às 14h</li>
+          <li class="footer-social"><i class="icon" data-icon="instagram"></i> @paneladebarro</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>© 2026 Panela de Barro. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="#" class="floating-wa js-wa-default" aria-label="Fazer pedido pelo WhatsApp">
+    <i class="icon" data-icon="message-circle"></i>
+  </a>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
