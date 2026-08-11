@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>José — Desenvolvedor em Formação | ADS</title>
+  <meta name="description" content="Portfólio de José Gabriel, estudante de Análise e Desenvolvimento de Sistemas em busca de estágio na área de tecnologia. Desenvolvimento, dados e automação com IA." />
+  <meta name="theme-color" content="#0b0e14" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="José Gabriel — Desenvolvedor em Formação" />
+  <meta property="og:description" content="Estudante de ADS construindo experiência em desenvolvimento de software, dados e automação com IA." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo" aria-label="Início">
+        <span class="nav-logo-bracket">&lt;</span>JG<span class="nav-logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="#sobre" class="nav-link" data-section="sobre">sobre</a>
+        <a href="#habilidades" class="nav-link" data-section="habilidades">habilidades</a>
+        <a href="#projetos" class="nav-link" data-section="projetos">projetos</a>
+        <a href="#trajetoria" class="nav-link" data-section="trajetoria">trajetória</a>
+        <a href="#contato" class="nav-link" data-section="contato">contato</a>
+      </nav>
+
+      <a href="#contato" class="btn btn-small btn-outline nav-cta">Entrar em contato</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#sobre" class="mobile-link">sobre</a>
+      <a href="#habilidades" class="mobile-link">habilidades</a>
+      <a href="#projetos" class="mobile-link">projetos</a>
+      <a href="#trajetoria" class="mobile-link">trajetória</a>
+      <a href="#objetivo" class="mobile-link">objetivo</a>
+      <a href="#contato" class="mobile-link">contato</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <p class="terminal-line eyebrow">
+            <span class="prompt">visitante@portfolio</span><span class="prompt-sep">:~$</span>
+            <span class="typed-cmd" id="typedCmd"></span><span class="cursor" aria-hidden="true">▍</span>
+          </p>
+
+          <h1 class="hero-title">
+            Olá, eu sou<br />
+            <span class="hero-name">José Gabriel</span>
+          </h1>
+
+          <p class="hero-role">
+            Estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> &amp; desenvolvedor em formação.
+          </p>
+
+          <p class="hero-desc">
+            Estou reconstruindo minha base técnica e transformando estudo em prática — com interesse
+            em desenvolvimento de software, dados e automação com Inteligência Artificial. Cada projeto
+            aqui é um passo real dessa formação, não um currículo pronto.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+            <a href="#contato" class="btn btn-outline">Entrar em contato</a>
+          </div>
+
+          <div class="hero-social">
+            <a href="#" class="social-link" data-placeholder="github" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="#" class="social-link" data-placeholder="linkedin" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.98v-6.4c0-1.7.32-3.34 2.42-3.34 2.08 0 2.1 1.94 2.1 3.45V21H22v-7.06c0-3.65-.79-6.46-5.05-6.46-2.05 0-3.42 1.12-3.98 2.19h-.05V8.48Z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+          <p class="hero-social-note">* links de contato serão adicionados em breve</p>
+        </div>
+
+        <aside class="hero-panel" aria-hidden="true">
+          <div class="editor-window">
+            <div class="editor-titlebar">
+              <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+              <span class="editor-filename">sobre-mim.json</span>
+            </div>
+            <pre class="editor-body"><code><span class="tok-brace">{</span>
+  <span class="tok-key">"nome"</span>: <span class="tok-str">"José Gabriel"</span>,
+  <span class="tok-key">"curso"</span>: <span class="tok-str">"ADS"</span>,
+  <span class="tok-key">"status"</span>: <span class="tok-str">"em formação"</span>,
+  <span class="tok-key">"interesses"</span>: <span class="tok-punc">[</span>
+    <span class="tok-str">"desenvolvimento"</span>,
+    <span class="tok-str">"dados"</span>,
+    <span class="tok-str">"automação com IA"</span>
+  <span class="tok-punc">]</span>,
+  <span class="tok-key">"objetivo"</span>: <span class="tok-str">"primeira oportunidade em tech"</span>,
+  <span class="tok-key">"disponível"</span>: <span class="tok-bool">true</span>
+<span class="tok-brace">}</span></code></pre>
+          </div>
+        </aside>
+
+      </div>
+
+      <a href="#sobre" class="scroll-cue" aria-label="Rolar para a próxima seção">
+        <span class="scroll-cue-line"></span>
+      </a>
+    </section>
+
+    <!-- ============ SOBRE MIM ============ -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <p class="eyebrow-code">// 01. sobre-mim.md</p>
+        <h2 class="section-title">Minha trajetória até aqui</h2>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Minha relação com tecnologia começou no curso técnico em Informática, feito no
+              <strong>IF (Instituto Federal)</strong>, onde tive meu primeiro contato real com
+              programação, lógica e sistemas.
+            </p>
+            <p>
+              Depois desse período, fiquei um tempo afastado da área — a vida acontece, e nem sempre
+              a trajetória é uma linha reta. Mas o interesse por tecnologia nunca saiu de vista.
+            </p>
+            <p>
+              Hoje estou cursando <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong>,
+              reconstruindo minha base técnica com mais maturidade e intenção. Estou estudando
+              programação de forma consistente e buscando transformar cada conceito aprendido em
+              projeto prático.
+            </p>
+            <p>
+              Tenho interesse particular em desenvolvimento de software, análise de dados e automação
+              com Inteligência Artificial — e este portfólio é, ele mesmo, parte desse processo:
+              vai crescer e mudar conforme eu evoluo.
+            </p>
+          </div>
+
+          <div class="about-stats reveal">
+            <div class="stat-card">
+              <span class="stat-label">Formação</span>
+              <span class="stat-value">Técnico em Informática (IF) → ADS em andamento</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Foco atual</span>
+              <span class="stat-value">Lógica, front-end, back-end e fundamentos de dados</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Explorando</span>
+              <span class="stat-value">Automação e Inteligência Artificial aplicada</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Buscando</span>
+              <span class="stat-value">Estágio ou primeira oportunidade em tecnologia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HABILIDADES ============ -->
+    <section class="section section-alt" id="habilidades">
+      <div class="container">
+        <p class="eyebrow-code">// 02. habilidades.ts</p>
+        <h2 class="section-title">Habilidades &amp; conhecimentos</h2>
+        <p class="section-subtitle">
+          Ainda estou em formação — os selos abaixo indicam meu nível real com cada tecnologia,
+          sem exagero.
+        </p>
+
+        <div class="skills-grid" id="skillsGrid"><!-- injected by script.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ PROJETOS ============ -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <p class="eyebrow-code">// 03. projetos.tsx</p>
+        <h2 class="section-title">Projetos</h2>
+        <p class="section-subtitle">
+          Os cards abaixo são <strong>exemplos ilustrativos</strong>, pensados para o tipo de projeto
+          que alguém em formação em ADS costuma construir. Substitua pelo conteúdo dos seus projetos reais.
+        </p>
+
+        <div class="projects-grid" id="projectsGrid"><!-- injected by script.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ TRAJETÓRIA / TIMELINE ============ -->
+    <section class="section section-alt" id="trajetoria">
+      <div class="container">
+        <p class="eyebrow-code">// 04. minha-trajetoria.log</p>
+        <h2 class="section-title">Minha trajetória</h2>
+        <p class="section-subtitle">
+          Ainda não tenho experiência profissional formal — e prefiro mostrar isso com clareza a
+          inventar algo que não vivi. Aqui está o que é real.
+        </p>
+
+        <ol class="timeline" id="timeline"><!-- injected by script.js --></ol>
+      </div>
+    </section>
+
+    <!-- ============ OBJETIVO PROFISSIONAL ============ -->
+    <section class="section objective" id="objetivo">
+      <div class="container">
+        <div class="objective-card reveal">
+          <p class="eyebrow-code">// 05. objetivo.env</p>
+          <h2 class="section-title">Objetivo profissional</h2>
+          <p class="objective-text">
+            Estou em busca de um <strong>estágio ou primeira oportunidade</strong> na área de
+            tecnologia — um lugar onde eu possa aplicar o que venho estudando, aprender com um time
+            e continuar evoluindo como desenvolvedor. Estou disponível, disposto a aprender rápido e
+            comprometido a entregar valor desde o primeiro dia.
+          </p>
+          <a href="#contato" class="btn btn-primary">Vamos conversar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section" id="contato">
+      <div class="container">
+        <p class="eyebrow-code">// 06. contato.sh</p>
+        <h2 class="section-title">Contato</h2>
+        <p class="section-subtitle">
+          Estou disponível para conversar sobre oportunidades, projetos ou apenas trocar uma ideia
+          sobre tecnologia.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <span class="contact-label">Email</span>
+            <a href="mailto:seuemail@exemplo.com" class="contact-value" data-placeholder="email">
+              seuemail@exemplo.com
+            </a>
+          </div>
+          <div class="contact-card reveal">
+            <span class="contact-label">GitHub</span>
+            <a href="#" class="contact-value" data-placeholder="github" target="_blank" rel="noopener noreferrer">
+              github.com/seu-usuario
+            </a>
+          </div>
+          <div class="contact-card reveal">
+            <span class="contact-label">LinkedIn</span>
+            <a href="#" class="contact-value" data-placeholder="linkedin" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/seu-usuario
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-cta reveal">
+          <a href="mailto:seuemail@exemplo.com" class="btn btn-primary btn-large">Enviar um email</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-name">José Gabriel <span class="footer-tag">&lt;desenvolvedor em formação /&gt;</span></p>
+      <div class="footer-links">
+        <a href="#" data-placeholder="github" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#" data-placeholder="linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:seuemail@exemplo.com">Email</a>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> José Gabriel. Feito com HTML, CSS e JavaScript.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+  </button>
+
+  <div class="status-bar" id="statusBar" aria-hidden="true">
+    <span class="status-dot"></span>
+    <span id="statusSection">hero.tsx</span>
+    <span class="status-sep">•</span>
+    <span>UTF-8</span>
+    <span class="status-sep">•</span>
+    <span>pt-BR</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
