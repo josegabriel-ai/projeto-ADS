@@ -1,0 +1,765 @@
+/* ============================================================
+   CONVITE DE CASAMENTO — Estilo Country Elegante & Premium
+   Mobile-first. Todas as cores/fontes vêm das variáveis abaixo.
+   ============================================================ */
+
+:root {
+  /* Paleta */
+  --cream:        #F4EFE6;
+  --cream-soft:   #FBF8F2;
+  --cream-deep:   #EAE2D3;
+  --brown:        #654B3C;
+  --brown-deep:   #4A362B;
+  --sage:         #87927A;
+  --sage-soft:    #A7B097;
+  --gold:         #B89A67;
+  --gold-soft:    #D3BE94;
+  --white:        #FFFFFF;
+
+  /* Tipografia */
+  --font-display: 'Parisienne', cursive;          /* nomes dos noivos */
+  --font-serif:   'Cormorant Garamond', serif;     /* títulos e datas */
+  --font-body:    'Jost', sans-serif;              /* textos correntes */
+
+  /* Espaçamento / ritmo */
+  --section-pad-y: 6rem;
+  --section-pad-x: 1.5rem;
+  --max-width: 640px;
+
+  /* Timing */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; }
+
+button { font-family: inherit; cursor: pointer; }
+
+::selection { background: var(--gold-soft); color: var(--brown-deep); }
+
+/* Foco visível e elegante */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 1.5px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   INDICADOR DE ROLAGEM
+   ============================================================ */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  z-index: 60;
+}
+.scroll-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--gold);
+  opacity: 0.55;
+  transition: width 0.1s linear;
+}
+
+/* ============================================================
+   BOTÃO DE MÚSICA
+   ============================================================ */
+.music-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-soft);
+  background: var(--cream-soft);
+  color: var(--brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  z-index: 50;
+  box-shadow: 0 4px 18px rgba(101, 75, 60, 0.15);
+  transition: transform 0.35s var(--ease-soft), background 0.35s var(--ease-soft), box-shadow 0.35s var(--ease-soft);
+}
+.music-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(101, 75, 60, 0.2); }
+.music-btn:active { transform: translateY(0) scale(0.94); }
+.music-btn.playing { background: var(--brown); color: var(--cream); }
+.music-btn.playing .music-icon { animation: music-pulse 1.6s ease-in-out infinite; }
+
+@keyframes music-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.18); opacity: 0.75; }
+}
+
+/* ============================================================
+   HERO — TELA DE ABERTURA
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 50% 0%, var(--cream-soft) 0%, var(--cream) 55%, var(--cream-deep) 100%);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.sprig {
+  position: absolute;
+  width: 70px;
+  height: auto;
+  color: var(--sage);
+  opacity: 0.4;
+}
+.sprig--left {
+  left: -8px;
+  bottom: -10px;
+  transform: rotate(-6deg);
+  animation: sway-left 9s ease-in-out infinite;
+}
+.sprig--right {
+  right: -8px;
+  bottom: -10px;
+  transform: rotate(6deg) scaleX(-1);
+  animation: sway-right 10s ease-in-out infinite;
+}
+
+@keyframes sway-left {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(-3deg); }
+}
+@keyframes sway-right {
+  0%, 100% { transform: rotate(6deg) scaleX(-1); }
+  50% { transform: rotate(3deg) scaleX(-1); }
+}
+
+.hero-content { max-width: 420px; }
+
+.hero-eyebrow {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  color: var(--sage);
+  margin: 0 0 1rem;
+}
+
+.hero-names {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3rem, 15vw, 4.4rem);
+  line-height: 1.05;
+  margin: 0 0 1.1rem;
+  color: var(--brown-deep);
+}
+.hero-names .name { display: inline-block; }
+.hero-names .amp {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.42em;
+  color: var(--gold);
+  margin: 0.15em 0;
+}
+
+.hero-date {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  letter-spacing: 0.18em;
+  color: var(--brown);
+  margin: 0 0 2rem;
+}
+.hero-date .dot { color: var(--gold); margin: 0 0.35em; }
+
+.hero-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--brown);
+  opacity: 0.85;
+  margin: 0 0 2.6rem;
+}
+
+.hero-scroll {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brown);
+  opacity: 0.75;
+  transition: opacity 0.3s var(--ease-soft);
+}
+.hero-scroll:hover { opacity: 1; }
+.hero-scroll svg { animation: bob 2.2s ease-in-out infinite; color: var(--gold); }
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* Animação de entrada dos elementos do hero */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(22px);
+  filter: blur(6px);
+  animation: hero-in 1.1s var(--ease-soft) forwards;
+}
+.reveal-item[data-delay="0"] { animation-delay: 0.15s; }
+.reveal-item[data-delay="1"] { animation-delay: 0.5s; }
+.reveal-item[data-delay="2"] { animation-delay: 0.95s; }
+.reveal-item[data-delay="3"] { animation-delay: 1.35s; }
+.reveal-item[data-delay="4"] { animation-delay: 1.75s; }
+
+@keyframes hero-in {
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+/* ============================================================
+   SEÇÕES GERAIS
+   ============================================================ */
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--section-pad-y) var(--section-pad-x);
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin: 0 0 1.1rem;
+}
+
+.section-lead {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  line-height: 1.55;
+  color: var(--brown-deep);
+  max-width: 30ch;
+  margin: 0 auto 1.8rem;
+}
+.section-lead.small { font-size: 1.05rem; max-width: 34ch; }
+
+/* Elemento a ser revelado ao rolar (JS adiciona .is-visible) */
+.reveal {
+  opacity: 0;
+  transition: opacity 1s var(--ease-soft), transform 1s var(--ease-soft), filter 1s var(--ease-soft);
+}
+.reveal[data-reveal="fade-up"] { transform: translateY(30px); filter: blur(4px); }
+.reveal[data-reveal="scale"] { transform: scale(0.94); filter: blur(4px); }
+.reveal[data-delay="1"] { transition-delay: 0.12s; }
+.reveal[data-delay="2"] { transition-delay: 0.24s; }
+.reveal[data-delay="3"] { transition-delay: 0.36s; }
+.reveal[data-delay="4"] { transition-delay: 0.48s; }
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  filter: blur(0);
+}
+
+/* Divisores */
+.divider {
+  display: flex;
+  justify-content: center;
+  padding: 0 1.5rem;
+  color: var(--gold-soft);
+}
+.divider-svg { width: 140px; height: 28px; }
+
+/* Botões */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.95rem 2.1rem;
+  border-radius: 2px;
+  transition: transform 0.3s var(--ease-soft), background 0.3s var(--ease-soft), color 0.3s var(--ease-soft), box-shadow 0.3s var(--ease-soft);
+  border: 1px solid transparent;
+}
+.btn:active { transform: scale(0.96); }
+
+.btn-outline {
+  border-color: var(--brown);
+  color: var(--brown);
+  background: transparent;
+}
+.btn-outline:hover { background: var(--brown); color: var(--cream); }
+
+.btn-solid {
+  border-color: var(--brown);
+  background: var(--brown);
+  color: var(--cream-soft);
+}
+.btn-solid:hover { background: var(--brown-deep); box-shadow: 0 8px 20px rgba(74, 54, 43, 0.25); }
+
+/* ============================================================
+   NOSSO CASAMENTO
+   ============================================================ */
+.info-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 0 0 2.4rem;
+}
+
+.info-card {
+  background: var(--cream-soft);
+  border: 1px solid var(--cream-deep);
+  border-radius: 3px;
+  padding: 1.6rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.info-label {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.info-value {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--brown-deep);
+}
+
+.info-sub {
+  font-size: 0.85rem;
+  color: var(--brown);
+  opacity: 0.75;
+}
+
+/* ============================================================
+   FOTO DO CASAL
+   ============================================================ */
+.couple-photo { padding-top: 0; padding-bottom: 0; max-width: 100%; }
+
+.couple-photo-frame {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 30px 60px -20px rgba(74, 54, 43, 0.35);
+}
+
+.parallax-wrap {
+  position: absolute;
+  inset: -6% 0;
+  will-change: transform;
+}
+
+.couple-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.06);
+  transition: transform 0.6s var(--ease-soft);
+}
+
+.photo-placeholder {
+  display: none;
+  position: absolute;
+  inset: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(160deg, var(--cream-deep), var(--sage-soft));
+  color: var(--brown-deep);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+.photo-placeholder.small { font-size: 0.7rem; gap: 0.3rem; }
+.photo-placeholder svg { color: var(--brown); opacity: 0.5; }
+
+.no-photo .couple-photo-img { display: none; }
+.no-photo .photo-placeholder { display: flex; }
+
+/* ============================================================
+   NOSSA HISTÓRIA
+   ============================================================ */
+.story-text {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--brown);
+  max-width: 42ch;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   GALERIA
+   ============================================================ */
+.gallery-section { max-width: 100%; padding-left: 0; padding-right: 0; }
+.gallery-section .eyebrow { padding: 0 1.5rem; }
+
+.gallery-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem 1.5rem 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.gallery-track::-webkit-scrollbar { display: none; }
+
+.gallery-item {
+  position: relative;
+  flex: 0 0 74%;
+  aspect-ratio: 3 / 4;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  scroll-snap-align: center;
+  background: var(--cream-deep);
+  padding: 0;
+  box-shadow: 0 16px 32px -14px rgba(74, 54, 43, 0.3);
+  transition: transform 0.3s var(--ease-soft);
+}
+.gallery-item:active { transform: scale(0.97); }
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item.no-photo img { display: none; }
+.gallery-item .photo-placeholder.small { display: none; }
+.gallery-item.no-photo .photo-placeholder.small {
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(74, 54, 43, 0.92);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.35s var(--ease-soft);
+}
+.lightbox[data-open="true"] { opacity: 1; }
+.lightbox[hidden] { display: none; }
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 4px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  background: none;
+  border: none;
+  color: var(--cream);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* ============================================================
+   CONTAGEM REGRESSIVA
+   ============================================================ */
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.countdown-box {
+  background: var(--cream-soft);
+  border: 1px solid var(--gold-soft);
+  border-radius: 4px;
+  padding: 1.1rem 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.countdown-num {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 6vw, 2.1rem);
+  color: var(--brown-deep);
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.countdown-footer {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--brown);
+  margin: 1.6rem 0 0;
+}
+
+.countdown-today {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--brown-deep);
+}
+
+/* ============================================================
+   RSVP — MODAL
+   ============================================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(74, 54, 43, 0.55);
+  backdrop-filter: blur(3px);
+  z-index: 90;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s var(--ease-soft);
+}
+.modal-overlay[data-open="true"] { opacity: 1; }
+.modal-overlay[hidden] { display: none; }
+
+@media (min-width: 640px) {
+  .modal-overlay { align-items: center; }
+}
+
+.modal {
+  background: var(--cream-soft);
+  width: 100%;
+  max-width: 460px;
+  border-radius: 14px 14px 0 0;
+  padding: 2.2rem 1.6rem 2.4rem;
+  position: relative;
+  transform: translateY(30px);
+  transition: transform 0.4s var(--ease-soft);
+  max-height: 88vh;
+  overflow-y: auto;
+}
+.modal-overlay[data-open="true"] .modal { transform: translateY(0); }
+
+@media (min-width: 640px) {
+  .modal { border-radius: 10px; }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.1rem;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--brown);
+  line-height: 1;
+}
+
+.rsvp-form h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--brown-deep);
+  margin: 0 0 1.6rem;
+}
+
+.rsvp-form label {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin: 1.1rem 0 0.4rem;
+}
+
+.rsvp-form input[type="text"],
+.rsvp-form input[type="number"] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--cream-deep);
+  background: transparent;
+  padding: 0.6rem 0.1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--brown-deep);
+  transition: border-color 0.3s var(--ease-soft);
+}
+.rsvp-form input:focus { border-color: var(--gold); outline: none; }
+
+.rsvp-fieldset {
+  border: none;
+  padding: 0;
+  margin: 1.3rem 0 0;
+}
+.rsvp-fieldset legend {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0;
+  font-size: 0.95rem;
+  color: var(--brown);
+  cursor: pointer;
+}
+.radio-option input { accent-color: var(--brown); width: 16px; height: 16px; }
+
+.rsvp-submit {
+  width: 100%;
+  margin-top: 1.6rem;
+  border: none;
+}
+
+.rsvp-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  padding: 1.2rem 0;
+  color: var(--gold);
+}
+.rsvp-success p {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--brown-deep);
+  margin: 0;
+}
+.rsvp-success-sub {
+  font-size: 1rem !important;
+  color: var(--brown) !important;
+  font-style: italic;
+}
+
+/* ============================================================
+   LISTA DE PRESENTES / DRESS CODE
+   ============================================================ */
+.dresscode-value {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--brown-deep);
+  margin: 0 0 0.8rem;
+}
+
+/* ============================================================
+   MENSAGEM FINAL
+   ============================================================ */
+.final-section {
+  padding-bottom: 5rem;
+}
+.final-icon { color: var(--gold); margin-bottom: 1.2rem; }
+.final-message {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--brown);
+  margin: 0 0 1rem;
+}
+.final-names {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--brown-deep);
+  margin: 0 0 0.4rem;
+}
+.final-date {
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  color: var(--sage);
+  margin: 0;
+}
+
+/* ============================================================
+   RESPONSIVIDADE — TABLET / DESKTOP
+   ============================================================ */
+@media (min-width: 640px) {
+  :root { --section-pad-y: 7.5rem; }
+
+  .info-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .gallery-item { flex: 0 0 320px; }
+
+  .hero-names { font-size: 5rem; }
+}
+
+@media (min-width: 960px) {
+  .section { max-width: 760px; }
+  .couple-photo-frame { max-width: 760px; }
+}
